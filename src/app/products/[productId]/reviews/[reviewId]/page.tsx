@@ -6,8 +6,12 @@ export default async function ReviewDetails({
   params: { productId: string; reviewId: string };
 }) {
   const { productId, reviewId } = await params;
-  console.log("PARAMS::::", productId,reviewId);
-  if (Number(reviewId) > 1000){
+  const random = Math.floor(Math.random() * 2);
+  console.log("PARAMS::::", productId, reviewId, random);
+  if (random === 1) {
+    throw new Error("Error loading review");
+  }
+  if (Number(reviewId) > 1000) {
     notFound();
   }
   return (
