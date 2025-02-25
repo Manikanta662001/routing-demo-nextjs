@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+import natureImg from '../../public/nature.jpg'
 export default function Home() {
   console.log("HOME::::::");
   return (
@@ -9,6 +11,8 @@ export default function Home() {
       <Link href={"/profile"}>Profile page</Link>
       <Link href={"/products"}>Products page</Link>
       <Link href={"/blog"}>Blog page</Link>
+      <Image src={natureImg} alt="unavailable" width={500} height={200}/>
+      <img src="./next.svg" alt="" />
     </>
   );
 }

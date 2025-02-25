@@ -5,9 +5,9 @@ import "./styles.css";
 import { useState } from "react";
 
 const navLinks = [
-  { name: "Register", href: "/auth/register" },
-  { name: "Login", href: "/auth/login" },
-  { name: "ForgotPwd", href: "/auth/forgot-pwd" },
+  { name: "Register", href: "/register" },
+  { name: "Login", href: "/login" },
+  { name: "ForgotPwd", href: "/forgot-pwd" },
 ];
 export default function AuthLayout({
   children,
