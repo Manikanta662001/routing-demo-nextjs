@@ -1,5 +1,9 @@
 import React from "react";
-export default async function Docs({ params }: { params: { slug: string[] } }) {
+export default async function Docs({
+  params,
+}: {
+  params: { slug?: string[] };
+}) {
   const { slug } = await params;
   console.log("PARAMS::::", slug);
   if (slug?.length === 2) {

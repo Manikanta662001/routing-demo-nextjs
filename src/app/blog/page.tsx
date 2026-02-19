@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 async function fetchData() {
   try {
     const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+    await new Promise((res) => setTimeout(res, 1000));
     const data = await res.json();
     return { data, status: "success" };
   } catch (error: any) {
