@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import { notFound } from "next/navigation";
-export default function ReviewDetails({
+export default async function ReviewDetails({
   params,
 }: {
-  params: { productId: string; reviewId: string };
+  params: Promise<{ productId: string; reviewId: string }>;
 }) {
-  const { productId, reviewId } = params;
+  const { productId, reviewId } = await params;
   const random = Math.floor(Math.random() * 2);
   console.log("PARAMS::::", productId, reviewId, random);
   if (random === 1) {

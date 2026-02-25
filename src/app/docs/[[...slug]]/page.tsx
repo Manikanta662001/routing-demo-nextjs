@@ -2,7 +2,7 @@ import React from "react";
 export default async function Docs({
   params,
 }: {
-  params: { slug?: string[] };
+  params: Promise<{ slug?: string[] }>;
 }) {
   const { slug } = await params;
   console.log("PARAMS::::", slug);
